@@ -1,0 +1,6 @@
+# Arquivo: backend/requirements.txt
+fastapi
+uvicorn[standard]
+python-dotenv
+google-generativeai # <-- Mudamos de 'openai' para esta
+python-multipart
