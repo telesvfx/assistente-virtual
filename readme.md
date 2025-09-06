@@ -11,29 +11,9 @@
 
 ---
 
-## 📚 Índice
-- [🎬 Demonstração](#-demonstração)
-- [📖 Sobre o Projeto](#-sobre-o-projeto)
-- [✨ Funcionalidades](#-funcionalidades)
-- [🧱 Arquitetura & Estrutura de Pastas](#-arquitetura--estrutura-de-pastas)
-- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
-- [⚙️ Configuração de Ambiente](#️-configuração-de-ambiente)
-- [🚀 Como Executar](#-como-executar)
-- [🎥 Como Adicionar seu Vídeo/GIF](#-como-adicionar-seu-vídeogif)
-- [🧪 Teste Rápido da API](#-teste-rápido-da-api)
-- [📦 Roadmap / Próximos Passos](#-roadmap--próximos-passos)
-- [🤝 Contribuindo](#-contribuindo)
-- [📄 Licença](#-licença)
-
----
-
 ## 🎬 Demonstração
 
-
-![Demonstração do Chatbot](assets/ass.gif) 
-
 ![Imagem](image.png) 
-
 
 
 ---
@@ -88,18 +68,7 @@ assistente-virtual/
 └── README.md
 ```
 
----
 
-## 🛠️ Tecnologias Utilizadas
-
-| Frontend | Backend |
-| --- | --- |
-| Next.js 14+ | Python 3.8+ |
-| React 18 | FastAPI |
-| TypeScript | Uvicorn |
-| Tailwind CSS | Google Generative AI (Gemini) |
-| shadcn/ui | python-dotenv |
-| React Three Fiber | |
 
 ---
 
@@ -202,19 +171,6 @@ curl -X POST http://localhost:8000/chat \
 ```
 
 > Se você utiliza um prefixo (ex.: `/api`), lembre-se de ajustar a **rota** no frontend.
-
----
-
-## 📦 Roadmap / Próximos Passos
-
-- [ ] **Entrada de voz completa**: gravação, envio ao backend e transcrição (ex.: Web Speech API / Whisper / Vosk).
-- [ ] **Síntese de fala (TTS)** para respostas com áudio.
-- [ ] **Streaming de tokens** no frontend (UX mais fluida).
-- [ ] **Estados de conversas** com persistência (ex.: IndexedDB/SQLite/Postgres).
-- [ ] **Testes** (unitários e e2e).
-- [ ] **Deploy** (ex.: Vercel para frontend; Render/Fly.io/DigitalOcean para backend).
-- [ ] **Monitoramento/observabilidade** (ex.: logs estruturados + tracing).
-
 
 
 ---
