@@ -37,7 +37,7 @@ O objetivo é oferecer uma experiência **imersiva e intuitiva**, com:
 - **Multimodal (base)** — texto pronto; **captura de áudio** preparada para evolução.
 - **Respostas de IA** — backend integra-se ao **Google Gemini** para gerar respostas coesas.
 - **APIs limpas** — endpoints REST com **FastAPI** e **Uvicorn** para execução local.
-- **Pronta para Deploy** — separação clara de frontend e backend facilita hospedagem independente.
+- **Pronta para Deploy** — separação clara de frontend e backend facilita hospedagem independente
 
 ---
 
