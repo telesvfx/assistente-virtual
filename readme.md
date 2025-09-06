@@ -5,89 +5,220 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge)
+![React Three Fiber](https://img.shields.io/badge/React%20Three%20Fiber-000000?style=for-the-badge)
 
 ---
 
-### Índice
+## 📚 Índice
 - [🎬 Demonstração](#-demonstração)
 - [📖 Sobre o Projeto](#-sobre-o-projeto)
+- [✨ Funcionalidades](#-funcionalidades)
+- [🧱 Arquitetura & Estrutura de Pastas](#-arquitetura--estrutura-de-pastas)
 - [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
-- [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
-- [🎥 Como Adicionar seu Vídeo](#-como-adicionar-seu-vídeo)
+- [⚙️ Configuração de Ambiente](#️-configuração-de-ambiente)
+- [🚀 Como Executar](#-como-executar)
+- [🎥 Como Adicionar seu Vídeo/GIF](#-como-adicionar-seu-vídeogif)
+- [🧪 Teste Rápido da API](#-teste-rápido-da-api)
+- [📦 Roadmap / Próximos Passos](#-roadmap--próximos-passos)
+- [🤝 Contribuindo](#-contribuindo)
+- [📄 Licença](#-licença)
 
 ---
 
 ## 🎬 Demonstração
 
-(Aqui você pode colocar um GIF animado de alta qualidade mostrando o chatbot em funcionamento).
 
-![Demonstração do Chatbot](chatbot-portugues - Copia/assets/2025-09-05 20-47-52.mp4)
+![Demonstração do Chatbot](assets/ass.gif) 
+
+![Imagem](image.png) 
+
+
 
 ---
 
 ## 📖 Sobre o Projeto
 
-Este é um protótipo de um site com uma interface de chatbot futurista, projetado para interagir com uma Inteligência Artificial através de texto e voz. O projeto combina um frontend moderno e reativo com um backend robusto em Python para processar as requisições de IA.
+Este repositório contém um **protótipo de assistente virtual** com interface de chatbot futurista, **suporte a voz** (base implementada) e **renderização 3D**. Ele combina um **frontend moderno** (Next.js + Tailwind + shadcn/ui + React Three Fiber) com um **backend em Python (FastAPI)** que orquestra chamadas à **API Google Generative AI (Gemini)**.
 
-O objetivo é criar uma experiência de usuário imersiva e intuitiva, onde a conversa com a IA é complementada por elementos visuais, como um assistente 3D e um fundo com partículas animadas.
+O objetivo é oferecer uma experiência **imersiva e intuitiva**, com:
+- Conversas em **texto** (pronto) e **voz** (fundação implementada, expansível);
+- **Assistente 3D** sutil e responsivo;
+- **Partículas/efeitos** para reforçar a estética futurista.
 
-### ✨ Funcionalidades
-- **Interface Interativa:** Construída com Next.js e Tailwind CSS para um visual moderno e responsivo.
-- **Assistente 3D:** Um modelo de esfera renderizado com React Three Fiber que reage sutilmente.
-- **Comunicação Multimodal:** Suporte para entrada de texto via teclado. A base para entrada de voz está implementada.
-- **Respostas Inteligentes:** O backend utiliza a API do Google Gemini para processar as entradas e gerar respostas coesas.
+---
+
+## ✨ Funcionalidades
+
+- **UI Interativa e Responsiva** — Next.js + Tailwind + shadcn/ui.
+- **Assistente 3D** — esfera animada em **React Three Fiber**, reagindo sutilmente à interação.
+- **Multimodal (base)** — texto pronto; **captura de áudio** preparada para evolução.
+- **Respostas de IA** — backend integra-se ao **Google Gemini** para gerar respostas coesas.
+- **APIs limpas** — endpoints REST com **FastAPI** e **Uvicorn** para execução local.
+- **Pronta para Deploy** — separação clara de frontend e backend facilita hospedagem independente.
+
+---
+
+## 🧱 Arquitetura & Estrutura de Pastas
+
+> Estrutura recomendada (ajuste se seu projeto já possuir uma organização diferente).
+
+```
+assistente-virtual/
+├── frontend/                 # Next.js (UI)
+│   ├── public/
+│   ├── src/
+│   │   ├── app/             # Rotas e layout (Next.js App Router)
+│   │   ├── components/      # Componentes UI
+│   │   ├── lib/             # Helpers (requisições, schemas, etc.)
+│   │   └── styles/
+│   ├── .env.local.example
+│   └── package.json
+├── backend/                  # FastAPI (serviços)
+│   ├── app.py                # Ou main.py (módulo FastAPI `app`)
+│   ├── routers/              # (opcional) separação por domínios
+│   ├── services/             # integrações (ex.: gemini.py)
+│   ├── models/               # pydantic models
+│   ├── requirements.txt
+│   └── .env.example
+├── assets/                   # GIFs, vídeos e imagens do README/site
+│   ├── demo.gif
+│   └── demo.mp4
+└── README.md
+```
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-As principais tecnologias usadas neste projeto foram:
-
 | Frontend | Backend |
 | --- | --- |
-| Next.js | Python 3.8+ |
+| Next.js 14+ | Python 3.8+ |
 | React 18 | FastAPI |
-| TypeScript | Google Generative AI |
-| Tailwind CSS | Uvicorn |
-| shadcn/ui | |
+| TypeScript | Uvicorn |
+| Tailwind CSS | Google Generative AI (Gemini) |
+| shadcn/ui | python-dotenv |
 | React Three Fiber | |
 
 ---
 
-## 🚀 Como Executar o Projeto
+## ⚙️ Configuração de Ambiente
 
-Siga os passos abaixo para configurar e rodar o projeto em sua máquina local.
+Crie arquivos `.env` para **frontend** e **backend** (valores de exemplo abaixo).
 
-### Pré-requisitos
-Antes de começar, garanta que você tenha o seguinte instalado:
-- **Node.js:** (versão 18.17 ou superior)
-- **Python:** (versão 3.8 ou superior)
-- **Chave de API do Google AI:** Essencial para o funcionamento da IA. Obtenha a sua no [Google AI Studio](https://aistudio.google.com/app/apikey).
+### Frontend (`frontend/.env.local`)
+```env
+# URL pública do backend
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 
-### Passo a Passo
+# (opcional) nome “carinhoso” do assistente apresentado na UI
+NEXT_PUBLIC_ASSISTANT_NAME=Orion
+```
 
-**1. Clone o Repositório (se aplicável)**
-Se o projeto estiver no GitHub, o primeiro passo é clonar o repositório.
+### Backend (`backend/.env`)
+```env
+# Chave do Google — gere no Google AI Studio
+GOOGLE_API_KEY=COLOQUE_SUA_CHAVE_AQUI
+
+# Modelo padrão (ajuste conforme sua implementação)
+MODEL=gemini-1.5-pro
+
+# CORS — ajuste se publicar o frontend em outro host
+ALLOWED_ORIGINS=http://localhost:3000
+```
+
+> **Dica:** mantenha seus arquivos `.env` fora do versionamento (`.gitignore`).
+
+---
+
+## 🚀 Como Executar
+
+### 1) Clonar o repositório
 ```bash
-git clone [https://github.com/telesvfx/assistente_virtual.git](https://github.com/telesvfx/assistente_virtual.git)
-cd assistente_virtual
+git clone https://github.com/telesvfx/assistente.git
+cd assistente
+```
 
-# 1. Navegue até a pasta do backend
+### 2) Backend (FastAPI)
+```bash
 cd backend
 
-# 2. Crie um ambiente virtual para isolar as dependências
+# Ambiente virtual
 python -m venv venv
 
-# 3. Ative o ambiente virtual (no Windows PowerShell)
+# Ativar (Windows PowerShell)
 .\venv\Scripts\Activate.ps1
+# Ativar (Windows cmd)
+.\venv\Scripts\activate.bat
+# Ativar (Linux/macOS)
+source venv/bin/activate
 
-# 4. Instale as bibliotecas Python necessárias
+# Dependências
 pip install -r requirements.txt
 
-# 5. Crie e configure sua chave de API
-# Crie um arquivo chamado ".env" e cole a linha abaixo, substituindo pelo seu valor.
-GOOGLE_API_KEY="SUA_CHAVE_DO_GOOGLE_AI_AQUI"
+# Variáveis de ambiente
+cp .env.example .env   # (ou crie manualmente e cole sua GOOGLE_API_KEY)
 
-# Na pasta raiz do projeto, instale todos os pacotes do Node.js
+# Subir servidor (ajuste o módulo conforme seu arquivo principal)
+uvicorn app:app --reload --port 8000
+# ou, se seu arquivo for main.py com objeto 'app':
+# uvicorn main:app --reload --port 8000
+```
+
+### 3) Frontend (Next.js)
+Abra um **novo terminal** na raiz do projeto:
+```bash
+cd frontend
+
+# Dependências
 npm install
+# ou
+yarn
+# ou
+pnpm install
 
+# Variáveis de ambiente
+cp .env.local.example .env.local
+
+# Subir a aplicação
+npm run dev
+# Default: http://localhost:3000
+```
+
+> Certifique-se de que `NEXT_PUBLIC_BACKEND_URL` (frontend) aponta para a porta/host do backend.
+
+---
+
+
+## 🧪 Teste Rápido da API
+
+Com o backend rodando, você pode testar rapidamente via `curl` (ajuste rotas/payload conforme sua implementação):
+```bash
+# Exemplo: rota /chat (POST) enviando uma mensagem do usuário
+curl -X POST http://localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message":"Olá, quem é você?"}'
+```
+
+> Se você utiliza um prefixo (ex.: `/api`), lembre-se de ajustar a **rota** no frontend.
+
+---
+
+## 📦 Roadmap / Próximos Passos
+
+- [ ] **Entrada de voz completa**: gravação, envio ao backend e transcrição (ex.: Web Speech API / Whisper / Vosk).
+- [ ] **Síntese de fala (TTS)** para respostas com áudio.
+- [ ] **Streaming de tokens** no frontend (UX mais fluida).
+- [ ] **Estados de conversas** com persistência (ex.: IndexedDB/SQLite/Postgres).
+- [ ] **Testes** (unitários e e2e).
+- [ ] **Deploy** (ex.: Vercel para frontend; Render/Fly.io/DigitalOcean para backend).
+- [ ] **Monitoramento/observabilidade** (ex.: logs estruturados + tracing).
+
+
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes.
