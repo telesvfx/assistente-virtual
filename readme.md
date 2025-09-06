@@ -176,4 +176,4 @@ curl -X POST http://localhost:8000/chat \
 ## 📄 Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes.
-](https://github.com/telesvfx/chatbot-portugues---Copia/tree/main)
+
