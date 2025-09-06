@@ -1,4 +1,6 @@
-# Assistente Virtual com IA e Reconhecimento de Voz
+<div align="center">
+  <h1>Assistente Virtual com IA</h1>
+</div>
 
 ![Next.js](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -9,14 +11,13 @@
 ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge)
 ![React Three Fiber](https://img.shields.io/badge/React%20Three%20Fiber-000000?style=for-the-badge)
 
----
+
 
 ## 🎬 Demonstração
 
-![Imagem](image.png) 
+![alt text](image.png) 
 
 
----
 
 ## 📖 Sobre o Projeto
 
@@ -36,7 +37,7 @@ O objetivo é oferecer uma experiência **imersiva e intuitiva**, com:
 - **Multimodal (base)** — texto pronto; **captura de áudio** preparada para evolução.
 - **Respostas de IA** — backend integra-se ao **Google Gemini** para gerar respostas coesas.
 - **APIs limpas** — endpoints REST com **FastAPI** e **Uvicorn** para execução local.
-- **Pronta para Deploy** — separação clara de frontend e backend facilita hospedagem independente.
+- **Pronta para Deploy** — separação clara de frontend e backend facilita hospedagem independente
 
 ---
 
@@ -103,10 +104,7 @@ ALLOWED_ORIGINS=http://localhost:3000
 
 ## 🚀 Como Executar
 
-### 1) Clonar o repositório
-```bash
-git clone https://github.com/telesvfx/assistente.git
-cd assistente
+
 ```
 
 ### 2) Backend (FastAPI)
@@ -178,3 +176,4 @@ curl -X POST http://localhost:8000/chat \
 ## 📄 Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes.
+](https://github.com/telesvfx/chatbot-portugues---Copia/tree/main)
